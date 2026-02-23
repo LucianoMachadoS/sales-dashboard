@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 export async function GET() {
   try {
     const sales = await prisma.sale.findMany({
-      orderBy: { id: "desc" },
+      orderBy: { data: "desc" },
     });
 
     // Map DB columns to frontend Sale interface
