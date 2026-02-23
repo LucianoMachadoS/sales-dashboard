@@ -22,12 +22,13 @@ export function getSalesData(): Sale[] {
 
   // Map raw data to fit our interface if needed
   return rawData.map((row: ExcelRow) => ({
-    ID: row.ID,
+    id: row.ID,
     Data: row.Data,
     Produto: row.Produto,
     Categoria: row.Categoria,
     Quantidade: row.Quantidade,
     PreçoUnitário: row["Preço Unitário"],
+    Custo: 0,
     Total: row.Total,
     Vendedor: row.Vendedor,
   }));

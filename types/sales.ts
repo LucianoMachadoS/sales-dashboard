@@ -1,5 +1,5 @@
 export interface Sale {
-  id?: number;
+  id: number;
   Data: string;
   Produto: string;
   Categoria: string;
