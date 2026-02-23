@@ -1,0 +1,24 @@
+// Prisma v7 schema - datasource URL is configured in prisma.config.ts
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Sale {
+  id              Int      @id @default(autoincrement())
+  data            String
+  produto         String
+  categoria       String
+  quantidade      Int
+  precoUnitario   Float
+  custo           Float    @default(0)
+  total           Float
+  vendedor        String
+  createdAt       DateTime @default(now())
+
+  @@map("sales")
+}
